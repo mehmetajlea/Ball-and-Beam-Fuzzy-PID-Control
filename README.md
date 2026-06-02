@@ -157,9 +157,9 @@ The controller uses a **9-rule fuzzy inference system** to determine the beam an
 
 ## Video Demonstration
 
-📌 Full System Demo (High Quality Video)
+Full System Demo 
 
-👉 [Watch here](https://github.com/mehmetajlea/Ball-and-Beam-Fuzzy-PID-Control/releases/tag/v1.0)
+[Watch here](https://github.com/mehmetajlea/Ball-and-Beam-Fuzzy-PID-Control/releases/tag/v1.0)
 ---
 
 ## Results & Performance
