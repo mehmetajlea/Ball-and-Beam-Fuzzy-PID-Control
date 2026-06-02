@@ -158,11 +158,10 @@ The controller uses a **9-rule fuzzy inference system** to determine the beam an
 ## Video Demonstration
 
 ### Demo 1
-[Watch Demo 1](demo.mp4)
+[Watch Demo 1](videos/demo.mp4)
 
 ### Demo 2
-[Watch Demo 2](demo2.mp4)
-
+[Watch Demo 2](videos/demo2.mp4)
 ---
 
 ## Results & Performance
