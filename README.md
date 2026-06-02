@@ -143,33 +143,25 @@ The controller uses a **9-rule fuzzy inference system** to determine the beam an
 
 ---
 
-## Project Demonstration
+## System Demonstration
 
-### System Photos
+Below are images of the implemented system:
 
-Add your images inside `/images` folder:
+![System 1](system1.jpg)
 
-```
-images/setup.jpg
-images/prototype.jpg
-images/results.jpg
-```
+![System 2](system2.jpg)
 
-Display them here:
-
-![System Setup](images/setup.jpg)
-
-![Prototype](images/prototype.jpg)
-
-![Results](images/results.jpg)
+![System 3](system3.jpg)
 
 ---
 
-### Video Demonstration
+## Video Demonstration
 
-Upload video to YouTube (recommended: unlisted) and paste link below:
+### Demo 1
+[Watch Demo 1](demo.mp4)
 
-▶️ [Watch System Demo](https://youtube.com/your-video-link)
+### Demo 2
+[Watch Demo 2](demo2.mp4)
 
 ---
 
