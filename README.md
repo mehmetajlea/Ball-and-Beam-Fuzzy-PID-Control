@@ -7,105 +7,98 @@ Fuzzy Logic and Control
 
 ## Project Description
 
-This project presents the design and implementation of a Ball and Beam control system using a hybrid Fuzzy Logic and PID control architecture on an Arduino Uno platform.
+This project presents the design and implementation of a Ball and Beam control system using a hybrid **Fuzzy Logic + PID control architecture** on an Arduino Uno platform.
 
-The objective is to maintain a ball at a desired position on a beam by continuously adjusting the beam angle through a DC motor. The system combines intelligent decision-making using fuzzy logic with precise actuator control through a PID controller.
+The objective is to stabilize and control the position of a ball on a beam by adjusting the beam angle using a DC motor. The system combines:
 
-The project demonstrates the practical application of fuzzy logic, classical control theory, sensor fusion, and embedded systems programming in a real-time mechatronic system.
+- Intelligent decision-making (Fuzzy Logic)
+- Precise feedback control (PID Controller)
+- Real-time sensor fusion
+- Embedded system implementation
+
+This project demonstrates practical application of modern control techniques in a mechatronic system.
 
 ---
 
 ## System Overview
 
-The control architecture consists of two cascaded control loops:
+The system consists of two cascaded control loops:
 
-### Outer Control Loop – Fuzzy Logic Controller
+### 1. Outer Loop – Fuzzy Logic Controller
 
-The fuzzy controller determines the desired beam angle based on:
+The fuzzy controller calculates the desired beam angle based on:
 
-- Ball position error  
-- Ball velocity (error rate)
+- Position error
+- Error rate (velocity of error)
 
-Inputs:
+**Error equation:**
+```
+e = x_target - x_actual
+```
 
-\[
-e = x_{target} - x_{actual}
-\]
+**Error rate:**
+```
+de/dt
+```
 
-\[
-\dot{e} = \frac{de}{dt}
-\]
+**Output:**
+```
+θ_target (desired beam angle)
+```
 
-Output:
-
-\[
-\theta_{target}
-\]
-
-The fuzzy inference system uses membership functions and rule-based reasoning to generate the optimal beam angle for stabilizing the ball.
+The fuzzy system uses membership functions and rule-based inference to generate the optimal control decision.
 
 ---
 
-### Inner Control Loop – PID Controller
+### 2. Inner Loop – PID Controller
 
-The PID controller regulates the beam angle by minimizing the error between desired and actual angle.
+The PID controller ensures the beam reaches the desired angle.
 
-Error:
+**Error:**
+```
+eθ = θ_target - θ_actual
+```
 
-\[
-e_{\theta} = \theta_{target} - \theta_{actual}
-\]
+**Control law:**
+```
+u(t) = Kp * e(t) + Ki * ∫e(t)dt + Kd * de(t)/dt
+```
 
-Control Law:
+**Controller Gains:**
 
-\[
-u(t) = K_p e(t) + K_i \int e(t)dt + K_d \frac{de(t)}{dt}
-\]
-
-Controller Gains:
-
-| Parameter | Value |
-|------------|--------|
-| Kp | 0.35 |
-| Ki | 0.03 |
-| Kd | 0.05 |
+- Kp = 0.35  
+- Ki = 0.03  
+- Kd = 0.05  
 
 ---
 
 ## Hardware Components
 
-### Main Controller
 - Arduino Uno
-
-### Sensors
 - HC-SR04 Ultrasonic Sensor
-- Potentiometer (Rev-type feedback)
-
-### Actuation
+- Potentiometer (feedback sensor)
 - DC Motor
 - L298N Motor Driver
-
-### Power System
-- External DC Power Supply
+- External Power Supply
 
 ---
 
 ## Pin Configuration
 
 ### Ultrasonic Sensor
-| Signal | Arduino Pin |
-|--------|-------------|
+| Signal | Pin |
+|--------|-----|
 | Trigger | D5 |
 | Echo | D6 |
 
 ### Potentiometer
-| Signal | Arduino Pin |
-|--------|-------------|
-| Analog Output | A5 |
+| Signal | Pin |
+|--------|-----|
+| Output | A5 |
 
 ### Motor Driver
-| Signal | Arduino Pin |
-|--------|-------------|
+| Signal | Pin |
+|--------|-----|
 | PWM | D9 |
 | IN1 | D10 |
 | IN2 | D11 |
@@ -115,8 +108,8 @@ Controller Gains:
 ## Software Features
 
 - Real-time distance measurement
-- Low-pass sensor filtering
-- Fuzzy inference system
+- Low-pass filtering for sensors
+- Fuzzy inference engine
 - PID control loop
 - PWM motor control
 - Deadband compensation
@@ -138,27 +131,66 @@ Controller Gains:
 - Flat Angle
 - High Angle
 
-The controller is based on a rule set of 9 fuzzy rules for decision-making.
+The controller uses a **9-rule fuzzy inference system** to determine the beam angle.
 
 ---
 
-## Experimental Objective
+## Experimental Setup
 
-- Target Ball Position: 20 cm  
-- Beam Operating Range: 132° – 158°  
-- Neutral Angle: 145°  
+- Target ball position: **20 cm**
+- Beam neutral angle: **145°**
+- Operating range: **132° – 158°**
+
+---
+
+## Project Demonstration
+
+### System Photos
+
+Add your images inside `/images` folder:
+
+```
+images/setup.jpg
+images/prototype.jpg
+images/results.jpg
+```
+
+Display them here:
+
+![System Setup](images/setup.jpg)
+
+![Prototype](images/prototype.jpg)
+
+![Results](images/results.jpg)
+
+---
+
+### Video Demonstration
+
+Upload video to YouTube (recommended: unlisted) and paste link below:
+
+▶️ [Watch System Demo](https://youtube.com/your-video-link)
+
+---
+
+## Results & Performance
+
+- Stable ball positioning achieved
+- Reduced oscillations due to filtering
+- Smooth motor response via PID tuning
+- Robust fuzzy decision-making
 
 ---
 
 ## Future Improvements
 
-- Adaptive PID tuning  
-- Kalman filtering for noise reduction  
-- Encoder-based feedback system  
-- Machine learning-based optimization  
-- Wireless monitoring and telemetry  
-- Data logging and system identification  
-- Model Predictive Control (MPC)  
+- Adaptive PID tuning
+- Kalman filter for noise reduction
+- Encoder-based feedback system
+- Machine learning optimization
+- Wireless monitoring (IoT integration)
+- Data logging and system identification
+- Model Predictive Control (MPC)
 
 ---
 
@@ -166,19 +198,18 @@ The controller is based on a rule set of 9 fuzzy rules for decision-making.
 
 This system is applicable in:
 
-- Control Systems Engineering  
-- Mechatronics Engineering  
-- Robotics  
-- Embedded Systems  
-- Intelligent Control Systems  
-- Industrial Automation  
-- Fuzzy Logic and Control Systems  
+- Control Systems Engineering
+- Mechatronics Engineering
+- Robotics
+- Embedded Systems
+- Intelligent Control Systems
+- Industrial Automation
 
 ---
 
 ## Author
 
-Lea Mehmetaj  
+**Lea Mehmetaj**  
 Bachelor of Mechatronics Engineering  
-UBT College, Prishtina  
+UBT College – Prishtina  
 2026
