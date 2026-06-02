@@ -145,13 +145,13 @@ The controller uses a **9-rule fuzzy inference system** to determine the beam an
 
 ## System Demonstration
 
-Below are images of the implemented system:
+### Images
 
-![System 1](system1.jpg)
+![System 1](images/system1.jpeg)
 
-![System 2](system2.jpg)
+![System 2](images/system2.jpeg)
 
-![System 3](system3.jpg)
+![System 3](images/system3.jpeg)
 
 ---
 
