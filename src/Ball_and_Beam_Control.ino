@@ -45,9 +45,9 @@ enum SpeedTerm { SPD_NEG, SPD_ZRO, SPD_POS };
 enum AngleTerm { ANG_LOW, ANG_FLAT, ANG_HIGH };
 
 const FuzzyTerm ERROR_TERMS[] = {
-  {-40.0f, -40.0f, -4.0f, -1.2f},  
+  {-20.0f, -40.0f, -4.0f, -1.2f},  
   {-2.5f,  -0.8f,   0.8f,  2.5f},  
-  { 1.2f,   4.0f,  40.0f, 40.0f}   
+  { 1.2f,   4.0f,  40.0f, 20.0f}   
 };
 
 const FuzzyTerm SPEED_TERMS[] = {
