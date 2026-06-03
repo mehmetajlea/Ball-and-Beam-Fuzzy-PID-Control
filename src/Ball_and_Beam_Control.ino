@@ -51,9 +51,9 @@ const FuzzyTerm ERROR_TERMS[] = {
 };
 
 const FuzzyTerm SPEED_TERMS[] = {
-  {-60.0f, -60.0f, -8.0f, -0.8f}, 
+  {-10.0f, -10.0f, -8.0f, -0.8f}, 
   {-2.0f,   0.0f,   0.0f,   2.0f}, 
-  { 0.8f,   8.0f,  60.0f,  60.0f}  
+  { 0.8f,   8.0f,  10.0f,  10.0f}  
 };
 
 const FuzzyTerm ANGLE_TERMS[] = {
